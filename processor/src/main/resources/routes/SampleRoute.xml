@@ -1,0 +1,8 @@
+<route>
+        <from uri="timer://foo?fixedRate=true&amp;period=60000"/>
+    <setBody>
+        <simple>Hello</simple>
+    </setBody>
+    <process ref="#class:org.myorg.camel.MyProcessor"/>
+    <to uri="log:hello"/>
+</route>
