@@ -11,9 +11,6 @@ public class MyMainApp {
 
         logger.debug("Starting main app");
 
-        MyMainApp thisApp=new MyMainApp();
-
-
         //creating main app to run in commandline
         Main main = new Main();
 

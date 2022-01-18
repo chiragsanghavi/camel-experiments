@@ -6,13 +6,12 @@ import org.apache.camel.Processor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+
 public class MyProcessor implements Processor {
 
     private static final Logger logger = LoggerFactory.getLogger(MyProcessor.class);
-    public MyProcessor()
-    {
 
-    }
     @Override
     public void process(Exchange exchange)  {
         logger.trace("Processing for "+exchange.getExchangeId());
