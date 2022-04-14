@@ -1,0 +1,9 @@
+<routeConfigurations>
+<routeConfiguration id="xmlError">
+    <onException>
+        <exception>java.lang.Exception</exception>
+        <handled><constant>true</constant></handled>
+        <log message="XML WARN: ${exception.message}" logName="org.myorg.RouteConfiguration"/>
+    </onException>
+</routeConfiguration>
+</routeConfigurations>

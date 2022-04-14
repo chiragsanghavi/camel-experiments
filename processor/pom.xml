@@ -51,6 +51,10 @@
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
+            <artifactId>camel-log</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
             <artifactId>camel-bean</artifactId>
         </dependency>
         <dependency>
@@ -180,18 +184,32 @@
 
                     </configuration>
                 </plugin>
+
             </plugins>
 
         </pluginManagement>
+
         <plugins>
             <!--
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
             </plugin> -->
+
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
             </plugin>
 
         </plugins>
+
     </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.5</version>
+            </plugin>
+        </plugins>
+    </reporting>
+
 </project>

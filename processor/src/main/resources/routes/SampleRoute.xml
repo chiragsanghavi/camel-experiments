@@ -1,8 +1,12 @@
-<route>
-        <from uri="timer://foo?fixedRate=true&amp;period=60000"/>
+<route routeConfigurationId="xmlError">
+        <from uri="timer://foo?fixedRate=true&amp;period=2000"/>
     <setBody>
         <simple>Hello</simple>
     </setBody>
-    <process ref="#class:org.myorg.camel.MyProcessor"/>
-    <to uri="log:hello"/>
+   <!-- <process ref="#class:org.myorg.camel.MyProcessor"/> -->
+    <to uri="log:org.myorg.custom1?level=DEBUG"/>
+    <log loggingLevel="DEBUG" logName="org.myorg.custom.TestRouteConfiguration"
+         message="hello1" />
+    <throwException exceptionType="java.lang.Exception" message="Some
+kind of XML error"/>
 </route>
